@@ -1,0 +1,19 @@
+{% extends "Staff_base.html"%}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid" style ="padding: 60px 20px 50px 50px">
+  <h1 style="margin-left:50px;padding:px;">Process Document</h1><br>
+  <div class="container-req" style="padding: 0; margin: 0 100;">
+  <form method="POST">
+        {% csrf_token %}
+        {{doneform.as_p}}
+
+        <input type="submit" value="Done" style="margin:20px">
+    </form>
+  </div>
+</div>
+
+
+
+{%endblock%}
